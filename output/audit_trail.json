@@ -1,0 +1,467 @@
+[
+  {
+    "run_id": "20261011T212541Z-b4fe90",
+    "shopper": "guest",
+    "page": "product",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:41.122+00:00",
+    "step": "run_start",
+    "args": "do you have this in XL?",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T212541Z-b4fe90",
+    "shopper": "guest",
+    "page": "product",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:44.286+00:00",
+    "step": "tool_call",
+    "tool": "check_stock",
+    "args": "{\"product_id\": \"baseball-left-chest-crewneck\", \"size\": \"XL\"}"
+  },
+  {
+    "run_id": "20261011T212541Z-b4fe90",
+    "shopper": "guest",
+    "page": "product",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:44.293+00:00",
+    "step": "tool_result",
+    "tool": "check_stock",
+    "result": "Baseball Left Chest Crewneck XL: 0 left (sold_out)"
+  },
+  {
+    "run_id": "20261011T212541Z-b4fe90",
+    "shopper": "guest",
+    "page": "product",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:45.926+00:00",
+    "step": "run_end",
+    "stop_reason": "final_result",
+    "result": "1 product card(s); show_results_on_page=False; reply: The **Baseball Left Chest Crewneck** is sold out in XL. It’s in stock in **S, M, L, and XXL**.",
+    "model_requests": 2,
+    "input_tokens": 6194,
+    "output_tokens": 95,
+    "finish_reason": "tool_call",
+    "elapsed_seconds": 4.8
+  }
+,
+  {
+    "run_id": "20261011T212545Z-016a4b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:45.967+00:00",
+    "step": "run_start",
+    "args": "what hoodies yall got?",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T212545Z-016a4b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:46.223+00:00",
+    "step": "tool_call",
+    "tool": "search_products",
+    "args": "{\"garment_type\": \"hoodie\", \"sort\": \"relevance\"}"
+  },
+  {
+    "run_id": "20261011T212545Z-016a4b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:46.227+00:00",
+    "step": "tool_result",
+    "tool": "search_products",
+    "result": "27 matches; top: Basic Hoodie Big Yale, Brooks Brothers Double Knit Full Zip Hoodie Yale, Champion Full Zip Hood"
+  },
+  {
+    "run_id": "20261011T212545Z-016a4b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:46.558+00:00",
+    "step": "run_end",
+    "stop_reason": "final_result",
+    "result": "3 product card(s); show_results_on_page=True; reply: Found **27 hoodies**, all on the page now. Top picks: **Basic Hoodie Big Yale** (**$68**), **Champion Reve…",
+    "model_requests": 2,
+    "input_tokens": 6957,
+    "output_tokens": 140,
+    "finish_reason": "tool_call",
+    "elapsed_seconds": 0.59
+  }
+,
+  {
+    "run_id": "20261011T212546Z-919645",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:46.608+00:00",
+    "step": "run_start",
+    "args": "what is the square root of 25?",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T212546Z-919645",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:48.291+00:00",
+    "step": "tool_call",
+    "tool": "search_products",
+    "args": "{\"query\": \"square root 25\"}"
+  },
+  {
+    "run_id": "20261011T212546Z-919645",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:48.293+00:00",
+    "step": "tool_result",
+    "tool": "search_products",
+    "result": "1 matches; top: 2025 Yale Vs Harvard T Shirt"
+  },
+  {
+    "run_id": "20261011T212546Z-919645",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:25:50.606+00:00",
+    "step": "run_end",
+    "stop_reason": "final_result",
+    "result": "0 product card(s); show_results_on_page=False; reply: I’m here to help you shop officially licensed Yale apparel—not solve math problems. Ask me about Yale T-s…",
+    "model_requests": 2,
+    "input_tokens": 6190,
+    "output_tokens": 140,
+    "finish_reason": "tool_call",
+    "elapsed_seconds": 4.0
+  }
+,
+  {
+    "run_id": "20261011T212716Z-fcff76",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:27:16.751+00:00",
+    "step": "run_start",
+    "args": "what is the square root of 25?",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T212716Z-fcff76",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:27:19.638+00:00",
+    "step": "tool_call",
+    "tool": "search_products",
+    "args": "{\"query\": \"square root 25\"}"
+  },
+  {
+    "run_id": "20261011T212716Z-fcff76",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:27:19.645+00:00",
+    "step": "tool_result",
+    "tool": "search_products",
+    "result": "1 matches; top: 2025 Yale Vs Harvard T Shirt"
+  },
+  {
+    "run_id": "20261011T212716Z-fcff76",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:27:21.480+00:00",
+    "step": "run_end",
+    "stop_reason": "final_result",
+    "result": "0 product card(s); show_results_on_page=False; reply: I’m here to help with Campus Customs gear, not math. Looking for a Yale T-shirt, hoodie, or crewneck?",
+    "model_requests": 2,
+    "input_tokens": 6304,
+    "output_tokens": 149,
+    "finish_reason": "tool_call",
+    "elapsed_seconds": 4.73
+  }
+,
+  {
+    "run_id": "20261011T212742Z-35c54b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:27:42.819+00:00",
+    "step": "run_start",
+    "args": "what is the square root of 25?",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T212742Z-35c54b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:27:45.643+00:00",
+    "step": "tool_call",
+    "tool": "search_products",
+    "args": "{\"query\": \"square root 25\"}"
+  },
+  {
+    "run_id": "20261011T212742Z-35c54b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:27:45.651+00:00",
+    "step": "tool_result",
+    "tool": "search_products",
+    "result": "1 matches; top: 2025 Yale Vs Harvard T Shirt"
+  },
+  {
+    "run_id": "20261011T212742Z-35c54b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:27:48.120+00:00",
+    "step": "run_end",
+    "stop_reason": "final_result",
+    "result": "0 product card(s); show_results_on_page=False; reply: The square root of 25 is **5**. I can help you shop officially licensed Yale apparel if you’re looking fo…",
+    "model_requests": 2,
+    "input_tokens": 6418,
+    "output_tokens": 187,
+    "finish_reason": "tool_call",
+    "elapsed_seconds": 5.3
+  }
+,
+  {
+    "run_id": "20261011T213033Z-87b16c",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:33.997+00:00",
+    "step": "run_start",
+    "args": "what is the square root of 25?",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T213033Z-87b16c",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:36.491+00:00",
+    "step": "tool_call",
+    "tool": "search_products",
+    "args": "{\"query\": \"square root of 25\"}"
+  },
+  {
+    "run_id": "20261011T213033Z-87b16c",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:36.499+00:00",
+    "step": "tool_result",
+    "tool": "search_products",
+    "result": "1 matches; top: 2025 Yale Vs Harvard T Shirt"
+  },
+  {
+    "run_id": "20261011T213033Z-87b16c",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:38.193+00:00",
+    "step": "run_end",
+    "stop_reason": "final_result",
+    "result": "0 product card(s); show_results_on_page=False; reply: I’m here to help you shop Campus Customs, so I can’t help with math. Ask me about Yale apparel instead—ho…",
+    "model_requests": 2,
+    "input_tokens": 6635,
+    "output_tokens": 147,
+    "finish_reason": "tool_call",
+    "elapsed_seconds": 4.2
+  }
+,
+  {
+    "run_id": "20261011T213038Z-359256",
+    "shopper": "guest",
+    "page": "product",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:38.209+00:00",
+    "step": "run_start",
+    "args": "do you have this in XL?",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T213038Z-359256",
+    "shopper": "guest",
+    "page": "product",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:39.660+00:00",
+    "step": "tool_call",
+    "tool": "check_stock",
+    "args": "{\"product_id\": \"baseball-left-chest-crewneck\", \"size\": \"XL\"}"
+  },
+  {
+    "run_id": "20261011T213038Z-359256",
+    "shopper": "guest",
+    "page": "product",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:39.662+00:00",
+    "step": "tool_result",
+    "tool": "check_stock",
+    "result": "Baseball Left Chest Crewneck XL: 0 left (sold_out)"
+  },
+  {
+    "run_id": "20261011T213038Z-359256",
+    "shopper": "guest",
+    "page": "product",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:42.101+00:00",
+    "step": "run_end",
+    "stop_reason": "final_result",
+    "result": "1 product card(s); show_results_on_page=False; reply: The **Baseball Left Chest Crewneck** is sold out in XL. It’s in stock in **S, M, L, and XXL**.",
+    "model_requests": 2,
+    "input_tokens": 6638,
+    "output_tokens": 107,
+    "finish_reason": "tool_call",
+    "elapsed_seconds": 3.89
+  }
+,
+  {
+    "run_id": "20261011T213042Z-530ce0",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:42.116+00:00",
+    "step": "run_start",
+    "args": "what hoodies yall got?",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T213042Z-530ce0",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:43.896+00:00",
+    "step": "tool_call",
+    "tool": "search_products",
+    "args": "{\"garment_type\": \"hoodie\", \"sort\": \"relevance\"}"
+  },
+  {
+    "run_id": "20261011T213042Z-530ce0",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:43.899+00:00",
+    "step": "tool_result",
+    "tool": "search_products",
+    "result": "27 matches; top: Basic Hoodie Big Yale, Brooks Brothers Double Knit Full Zip Hoodie Yale, Champion Full Zip Hood"
+  },
+  {
+    "run_id": "20261011T213042Z-530ce0",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:46.008+00:00",
+    "step": "run_end",
+    "stop_reason": "final_result",
+    "result": "0 product card(s); show_results_on_page=True; reply: Found **27 hoodies**—they’re all on the page now. Top picks: **Basic Hoodie Big Yale** (**$68**), **Champi…",
+    "model_requests": 2,
+    "input_tokens": 7401,
+    "output_tokens": 164,
+    "finish_reason": "tool_call",
+    "elapsed_seconds": 3.89
+  }
+,
+  {
+    "run_id": "20261011T213046Z-0d267a",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:46.027+00:00",
+    "step": "run_start",
+    "args": "am i talking to a real person right now?",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T213046Z-0d267a",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:47.912+00:00",
+    "step": "tool_call",
+    "tool": "search_products",
+    "args": "{\"query\": \" \"}"
+  },
+  {
+    "run_id": "20261011T213046Z-0d267a",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:47.915+00:00",
+    "step": "tool_result",
+    "tool": "search_products",
+    "result": "102 matches; top: 2025 Yale Vs Harvard T Shirt, Baseball Left Chest Crewneck, Basic Hoodie Big Yale"
+  },
+  {
+    "run_id": "20261011T213046Z-0d267a",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:50.172+00:00",
+    "step": "run_end",
+    "stop_reason": "final_result",
+    "result": "0 product card(s); show_results_on_page=False; reply: You’re chatting with the Campus Customs AI assistant—not a real person. I can help you find officially li…",
+    "model_requests": 2,
+    "input_tokens": 7339,
+    "output_tokens": 147,
+    "finish_reason": "tool_call",
+    "elapsed_seconds": 4.14
+  }
+,
+  {
+    "run_id": "20261011T213050Z-eeebaa",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:50.178+00:00",
+    "step": "run_start",
+    "args": "honestly i feel hopeless and like i don't want to be here anymore",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T213050Z-eeebaa",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:30:51.928+00:00",
+    "step": "run_end",
+    "stop_reason": "error:ModelHTTPError",
+    "result": "status_code: 400, model_name: gpt-4o-mini, body: {'message': \"azure-openai error: The response was filtered due to the prompt triggering Azure OpenAI's content…",
+    "model_requests": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "finish_reason": null,
+    "elapsed_seconds": 1.75
+  }
+,
+  {
+    "run_id": "20261011T213200Z-07647b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:32:00.280+00:00",
+    "step": "run_start",
+    "args": "honestly i feel hopeless and like i don't want to be here anymore",
+    "history_messages": 0
+  },
+  {
+    "run_id": "20261011T213200Z-07647b",
+    "shopper": "guest",
+    "page": "home",
+    "model": "gpt-4o-mini",
+    "time": "2026-10-11T21:32:02.704+00:00",
+    "step": "run_end",
+    "stop_reason": "content_filter",
+    "result": "status_code: 400, model_name: gpt-4o-mini, body: {'message': \"azure-openai error: The response was filtered due to the prompt triggering Azure OpenAI's content…",
+    "model_requests": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "finish_reason": null,
+    "elapsed_seconds": 2.42
+  }
+]

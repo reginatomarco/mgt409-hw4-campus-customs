@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs: app check</title>
+  <style>
+    body { margin: 0; background: #f4f6fa; color: #14202e; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 1000px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1 { margin: 0 0 0.25rem; color: #00356b; }
+    h2 { margin: 0 0 0.75rem; color: #00356b; }
+    .meta { color: #5d6b7c; margin: 0 0 1.5rem; }
+    .check { background: #fff; border: 1px solid #e1e6ee; border-left: 6px solid #00356b; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+    .result { display: inline-block; margin-bottom: 0.75rem; padding: 0.2rem 0.7rem; border-radius: 999px; background: #e3f4e8; color: #1d7a3a; font-weight: 700; font-size: 0.9rem; }
+    figure { margin: 1rem 0; }
+    img { display: block; width: 100%; border: 1px solid #d5dce6; border-radius: 8px; }
+    figcaption { margin-top: 0.5rem; color: #3a4757; }
+    table { border-collapse: collapse; width: 100%; margin: 0.75rem 0; font-size: 0.95rem; }
+    th, td { border: 1px solid #e1e6ee; padding: 0.4rem 0.6rem; text-align: left; }
+    th { background: #f0f3f8; }
+    code { background: #f0f3f8; padding: 0.05rem 0.3rem; border-radius: 4px; }
+    .summary td:last-child { font-weight: 700; color: #1d7a3a; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Campus Customs: app check</h1>
+  <p class="meta">
+    Tested on the live site on 2026-10-11 (frontend on <code>localhost:5173</code>, FastAPI backend on port 8000, real PydanticAI agent through Portkey).
+    A script clicked through the site in Microsoft Edge (Playwright) as a guest shopper and took these screenshots. Expected values were read straight from <code>data/campus_customs.db</code>.
+  </p>
+
+  <table class="summary">
+    <tr><th>Check</th><th>What was tested</th><th>Result</th></tr>
+    <tr><td>1</td><td>Chat looks up stock and price for an item</td><td>Pass</td></tr>
+    <tr><td>2</td><td>Category question shows search-result cards on the page; a card opens its product page</td><td>Pass</td></tr>
+    <tr><td>3</td><td>Usability feature: live password checklist (Problem 9)</td><td>Pass</td></tr>
+  </table>
+
+  <!-- Check 1 -->
+  <section class="check">
+    <h2>Check 1: Chat checks the inventory level of an item</h2>
+    <span class="result">Pass: answer matches the database</span>
+    <p>On the Yale Mom Hoodie product page, the shopper asked: <em>"How many Yale Mom Hoodies do you have left in XXL, and how much is it?"</em></p>
+    <figure>
+      <img src="app_check_images/inventory.png" alt="Chat reply: there are 2 Yale Mom Hoodies left in XXL, low stock, it's $68, with a product card">
+      <figcaption>The assistant answered <strong>"2 Yale Mom Hoodies left in XXL… low stock. It's $68"</strong> and showed the product card. This proves it looked up real stock and price with its tools: the database has <code>inventory</code> XXL = 2 and <code>catalogue</code> price = $68.00.</figcaption>
+    </figure>
+    <table>
+      <tr><th>Source</th><th>XXL in stock</th><th>Price</th></tr>
+      <tr><td>Database (<code>inventory</code>, <code>catalogue</code>)</td><td>2</td><td>$68.00</td></tr>
+      <tr><td>Assistant's answer</td><td>2 (flagged as low stock)</td><td>$68</td></tr>
+    </table>
+  </section>
+
+  <!-- Check 2 -->
+  <section class="check">
+    <h2>Check 2: Search-result cards appear after a category question</h2>
+    <span class="result">Pass: 27 of 27 hoodies shown</span>
+    <p>From the home page, the shopper asked the chat: <em>"what hoodies yall got?"</em></p>
+    <figure>
+      <img src="app_check_images/search_results.png" alt="Assistant results page with the question banner, 27 matches for hoodie, hoodie product cards, and the chat reply">
+      <figcaption>The site moved to <code>/products?view=chat</code> on its own and showed <strong>27 hoodie product cards</strong> (photo, category tag, blurb, price) under the banner "what hoodies yall got? · 27 matches for hoodie". The chat summarized the top picks. The database has 27 hoodie products, so every match reached the page.</figcaption>
+    </figure>
+    <figure>
+      <img src="app_check_images/search_result_detail.png" alt="Product page for Basic Hoodie Big Yale opened from the results, with an Assistant results back link">
+      <figcaption>Clicking the first result card opened the normal single-product page from Problem 3 (<code>/products/basic-hoodie-big-yale</code>), with price, colors, sizes and a <strong>"← Assistant results"</strong> link back. Dynamic cards still open the detail view.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Check 3 -->
+  <section class="check">
+    <h2>Check 3: Usability feature (live password checklist)</h2>
+    <span class="result">Pass: button unlocks only when every rule is met</span>
+    <p>On <strong>Create Account</strong>, the password was typed in two steps. Nothing was submitted, so no account was created.</p>
+    <figure>
+      <img src="app_check_images/usability_password_partial.png" alt="Create Account form with password bulldog1: three rules ticked green, special character missing, button disabled">
+      <figcaption>With <code>bulldog1</code>, three rules are ticked green, "A special character" is still open, and the <strong>Create account button is disabled</strong>. The shopper sees what's missing before submitting.</figcaption>
+    </figure>
+    <figure>
+      <img src="app_check_images/usability_password_complete.png" alt="Create Account form with password bulldog1! confirmed: all four rules ticked, button enabled">
+      <figcaption>After adding <code>!</code> and confirming the password, all four rules are green and the <strong>button is enabled</strong>. The backend enforces the same rules (Problem 9, <code>output/usability.md</code>).</figcaption>
+    </figure>
+  </section>
+
+  <p class="meta">
+    Test notes: the two chat checks used 2 paid model calls (both returned HTTP 200). The tests ran as a guest, so nothing was written to the database (<code>chat_messages</code> stayed at 36 rows, <code>users</code> at 4).
+  </p>
+</main>
+</body>
+</html>
